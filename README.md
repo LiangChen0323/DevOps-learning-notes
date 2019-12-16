@@ -20,6 +20,7 @@ Udemy course - Ultimate AWS Certified Solutions Architect Associate 2020 - https
 
 Linux & DevOps tools:
 Linux Academy - https://app.linuxacademy.com/dashboard
+Bash - https://linuxacademy.com/cp/modules/view/id/72
 Docker documents - https://docs.docker.com/
 Udemy course - Docker Mastery: with Kubernetes + Swarm from a Docker Captain - https://www.udemy.com/course/docker-mastery/
 
