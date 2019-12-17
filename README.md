@@ -34,7 +34,7 @@ Depends on my work shift
 
 Studing environment:
 Laptop: MSI GT62VR 7RE, Win10
-Laptop: Macbook Pro 2015, MacOS
+Laptop: Macbook Pro 2015, MacOS + CentOS7 VM
 Synergy is used between two laptops, an application for sharing a keyboard and mouse between multiple computers.
 Keyboard: Cherry MX 3000 Balck switch
 Mouse: Razer Deathadder
