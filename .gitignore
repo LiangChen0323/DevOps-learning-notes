@@ -4,3 +4,7 @@ Python_LeetCode/z_notes.md
 Ansible/
 SQL/
 Terraform/
+.DS_Store
+.gitignore
+.gitattributes
+~$Notes.docx
