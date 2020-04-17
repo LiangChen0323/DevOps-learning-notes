@@ -55,3 +55,4 @@ Synergy is used between two laptops, an application for sharing a keyboard and m
 Keyboard: Cherry MX 3000 Balck switch  
 Mouse: Razer Deathadder  
 Cat: Q
+
