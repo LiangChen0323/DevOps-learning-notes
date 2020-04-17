@@ -20,7 +20,6 @@ By end of June 2020, finish following 4.
 
 [Official site]https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do_v  
 [Udemy course - Ultimate AWS Certified Solutions Architect Associate 2020]https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c01/
-
 [AWS]https://linuxacademy.com/cp/modules/view/id/232?redirect_uri=https://app.linuxacademy.com/search?type=Course&categories=AWS
 
 ### Linux & DevOps tools:
