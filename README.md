@@ -12,7 +12,7 @@ By end of June 2020, finish following 4.
 
 3. DevOps tools: Docker, kubernetes, Jenkins, Terraform, Ansible
 
-4. Python3 (Complete 5 questions per day on leetcode after finish Python course)
+4. Python3 (Leetcode)
 
 ## Resource and Study sites:
 
