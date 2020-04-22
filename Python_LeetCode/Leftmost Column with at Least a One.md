@@ -69,14 +69,14 @@ class Solution:
             return -1
 
         result = -1
-        r = 0
-        c = cols -1
+        x = 0
+        y = cols -1
 
-        while(r <rows and c >= 0):
-            if(binaryMatrix.get(r,c) == 1):
-                result = c
-                c -= 1
+        while(x <rows and y >= 0):
+            if(binaryMatrix.get(x,y) == 1):
+                result = y
+                y -= 1
             else:
-                r += 1
+                x += 1
         return result
 ```
