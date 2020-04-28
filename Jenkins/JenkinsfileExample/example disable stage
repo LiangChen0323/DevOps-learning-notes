@@ -1,0 +1,67 @@
+#!/bin/env groovy
+
+/*
+  Parameters:
+    GIT_MAVEN_REPOSITORY - Maven registry to be used when pushing artifacts
+    GIT_MAVEN_CREDENTIALS_ID - Credentials when using GIT_MAVEN_REPOSITORY
+    DOCKER_PUSH_REGISTRY - Docker registry to be used when pushing image
+    DOCKER_PUSH_REGISTRY_CREDENTIALS_ID - Credentials when using DOCKER_PUSH_REGISTRY
+ */
+
+
+
+pipeline {
+
+    // parameters {
+    //   string(name: 'PARAM_1', description: 'parameter #1', defaultValue: 'default_a')
+    //   string(name: 'PARAM_2', description: 'parameter #2')
+    //   string(name: 'PARAM_ONLY_IN_JENKINS_BRANCH', description: 'this param is only present in jenkins branch ')
+    //   string(name: 'PARAM_EXTRA', description: 'en extra param ')
+    //   // string(name: 'GIT_MAVEN_REPOSITORY', description: 'Maven registry to be used when pushing artifacts')
+    //   // string(name: 'GIT_MAVEN_CREDENTIALS_ID', description: 'Credentials when using GIT_MAVEN_REPOSITORY')
+    //   // string(name: 'DOCKER_PUSH_REGISTRY', description: 'Docker registry to be used when pushing image')
+    //   // string(name: 'DOCKER_PUSH_REGISTRY_CREDENTIALS_ID', description: 'Credentials when using DOCKER_PUSH_REGISTRY')
+    // }
+
+  agent any
+
+  environment {
+    POM_GROUP_ID = readMavenPom().getGroupId()
+    POM_VERSION = readMavenPom().getVersion()
+    BUILD_RELEASE_VERSION = readMavenPom().getVersion().replace("-SNAPSHOT", "")
+    GIT_TAG_COMMIT = sh (script: 'git describe --tags --always', returnStdout: true).trim()
+    //IS_SNAPSHOT = readMavenPom().getVersion().endsWith("-SNAPSHOT")
+    IS_SNAPSHOT = getMavenVersion().endsWith("-SNAPSHOT")
+    version_a = getMavenVersion()
+  }
+
+  stages {
+    stage('Init') {
+      steps {
+        echo "version_a: ${env.versiona_a}"
+        script {println type: IS_SNAPSHOT.getClass()}
+        echo sh(script: 'env|sort', returnStdout: true)
+        echo "Variable params: ${params}"
+        //echo "params.PARAM_1: ${params.PARAM_1}"
+
+      }
+    }
+    stage('Build') {
+      when {
+        expression { false }  //disable this stage
+      }
+      steps {
+        sh './mvnw -B clean package -DskipTests'
+        archive includes: '**/target/*.jar'
+        stash includes: '**/target/*.jar', name: 'jar'
+      }
+    }
+
+  }
+}
+
+
+
+def getMavenVersion() {
+  return sh(script: "./mvnw org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version | grep -v '\\['  | tail -1", returnStdout: true).trim()
+}
