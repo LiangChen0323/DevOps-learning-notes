@@ -6,11 +6,11 @@ This is notes of learning DevOps By Liang Chen
 
 By end of June 2020, finish following 4.
 
-1. Linux (CentOS7/8, Bash Scripting)
+1. Linux (CentOS8/Ubuntu, Bash Scripting)
 
-2. AWS (Get AWS Certified Solutions Architect – Associate by end of June 2020)
+2. AWS (Get AWS Certified Solutions Architect – Associate by end of June 2020), obtained my AWS Certified Solutions Architect - Associate on 15th Jan 2020
 
-3. DevOps tools: Docker, kubernetes, Jenkins, Terraform, Ansible
+3. DevOps: Docker, Kubernetes, Jenkins, Terraform, Ansible
 
 4. Python3 (Leetcode)
 
@@ -24,23 +24,23 @@ By end of June 2020, finish following 4.
 
 ### Linux & DevOps tools:
 
-[Linux Academy]https://app.linuxacademy.com/dashboard
-[Bash]https://linuxacademy.com/cp/modules/view/id/72
+[Linux Academy]https://app.linuxacademy.com/dashboard  
+[Bash]https://linuxacademy.com/cp/modules/view/id/72  
 [Docker documents]https://docs.docker.com/  
-[Udemy course - Docker Mastery: with Kubernetes + Swarm from a Docker Captain]https://www.udemy.com/course/docker-mastery/
-[Terraform]https://linuxacademy.com/cp/modules/view/id/358?redirect_uri=https://app.linuxacademy.com/search?query=Terraform&categories=DevOps~Cloud~AWS&type=Course#
-[Ansible_1]https://linuxacademy.com/cp/modules/view/id/317?redirect_uri=https://app.linuxacademy.com/search?query=Ansible&categories=DevOps&type=Course
-[Ansible_2]https://linuxacademy.com/cp/modules/view/id/318?redirect_uri=https://app.linuxacademy.com/search?query=Ansible&categories=DevOps&type=Course
-[Ansible_3]https://linuxacademy.com/cp/modules/view/id/366?redirect_uri=https://app.linuxacademy.com/search?query=ansin&categories=DevOps&type=Course
-[Jenkins]https://linuxacademy.com/cp/modules/view/id/218?redirect_uri=https://app.linuxacademy.com/search?query=jenk&categories=AWS&type=Course
-[Docker]https://linuxacademy.com/cp/modules/view/id/270?redirect_uri=https://app.linuxacademy.com/search?categories=DevOps&type=Course&page=2
+[Udemy course - Docker Mastery: with Kubernetes + Swarm from a Docker Captain]https://www.udemy.com/course/docker-mastery/  
+[Terraform]https://linuxacademy.com/cp/modules/view/id/358?redirect_uri=https://app.linuxacademy.com/search?query=Terraform&categories=DevOps~Cloud~AWS&type=Course#  
+[Ansible_1]https://linuxacademy.com/cp/modules/view/id/317?redirect_uri=https://app.linuxacademy.com/search?query=Ansible&categories=DevOps&type=Course  
+[Ansible_2]https://linuxacademy.com/cp/modules/view/id/318?redirect_uri=https://app.linuxacademy.com/search?query=Ansible&categories=DevOps&type=Course  
+[Ansible_3]https://linuxacademy.com/cp/modules/view/id/366?redirect_uri=https://app.linuxacademy.com/search?query=ansin&categories=DevOps&type=Course  
+[Jenkins]https://linuxacademy.com/cp/modules/view/id/218?redirect_uri=https://app.linuxacademy.com/search?query=jenk&categories=AWS&type=Course  
+[Docker]https://linuxacademy.com/cp/modules/view/id/270?redirect_uri=https://app.linuxacademy.com/search?categories=DevOps&type=Course&page=2  
 [Kubernetes]https://linuxacademy.com/cp/modules/view/id/371?redirect_uri=https://app.linuxacademy.com/search?query=Kubernetes&type=Hands-On%20Lab~Live%20Environment%20Learning%20Activity~Course
 [Linux]https://linuxacademy.com/cp/modules/view/id/370
 
 ### Python:
 
-[Github]https://github.com/TwoWater/Python
-[Leetcode]https://leetcode.com/
+[Github]https://github.com/TwoWater/Python  
+[Leetcode]https://leetcode.com/  
 [Youtube]https://www.youtube.com/user/xxfflower/
 
 Studying hour:  
@@ -55,4 +55,3 @@ Synergy is used between two laptops, an application for sharing a keyboard and m
 Keyboard: Cherry MX 3000 Balck switch  
 Mouse: Razer Deathadder  
 Cat: Q
-
