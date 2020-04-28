@@ -1,0 +1,13 @@
+- hosts: localhost
+  gather_facts: no
+  vars_files:
+    - keys.yml
+  tasks:
+    - name: Attach Volume
+      ec2_vol:
+        aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
+        aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
+        ec2_region: "{{ AWS_REGION }}"
+        instance: i-008f8449573953a32
+        id: vol-01b459967a217a27b
+        delete_on_termination: yes
