@@ -12,7 +12,7 @@ By end of June 2020, finish following 4.
 
 3. DevOps: Docker, Kubernetes, Jenkins, Terraform, Ansible
 
-4. Python3 (Leetcode)
+4. Python3 (Leetcode, Leetcode 30-Day LeetCoding Challenge April)
 
 ## Resource and Study sites:
 
