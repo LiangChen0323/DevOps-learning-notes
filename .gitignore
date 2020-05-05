@@ -4,6 +4,7 @@ Ansible/318-ansible-playhbooks-studyguide_1554292923.pdf
 Ansible/366_ansible-and-amazon-web-services-cheatsheet_1563634166.pdf
 SQL/
 Terraform/
+!Terraform/terransible-master/Steps.md
 .DS_Store
 .gitignore
 .gitattributes
@@ -15,3 +16,4 @@ Python_LeetCode/test/
 ~$Notes.docx
 .DS_Store
 Interview/
+Python/thinkpython2.pdf
