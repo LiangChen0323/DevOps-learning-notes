@@ -33,7 +33,7 @@
    2.4 create delegation  
    `aws route53 create-reusable-delegation-set --caller-reference 1224 --profile liangchen` save the output to a file => update Registered domains and host zone?
 
-3. Create Credentials and variables
+3. Create Credentials and variables  
    3.1 create files under /home/user/terransible -> working dir
    `touch main.tf terraform.tfvars variables.tf userdata aws_hosts wordpress.yml s3update.yml`  
     3.2 set variables  
