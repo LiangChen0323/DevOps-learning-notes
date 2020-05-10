@@ -706,4 +706,5 @@
     asg_grace        = "300"
     asg_hct          = "EC2"
     asg_cap          = "2"
+        asg_cap          = "2"
     ```
