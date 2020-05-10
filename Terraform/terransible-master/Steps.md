@@ -13,7 +13,7 @@
     `export PATH="$PATH:/bin/terraform"` then `source ~/.bashrc`  
     1.5 install awscli  
     `pip3 install awscli --upgrade`  
-    1.6 intall ansible  
+    1.6 install ansible  
     `apt-get install software-properties-common`  
     `apt-add-repository ppa:ansible/ansible`  
     `apt-get update`  
@@ -22,7 +22,7 @@
     `ssh-keygen` `ssh-agent bash` `ssh-add ~/.ssh/id_rsa` `ssh-add -l`  
     1.8 disable ansible ssh key host checking  
     `vim /etc/ansible/ansible.cfg`  
-    uncommit `#host_key_checking = False`
+    uncomment `#host_key_checking = False`
 
 2.  AWS IAM and route 53  
     2.1 Create an user with `AdministratorAccess` policy  
@@ -616,4 +616,13 @@
      elb_timeout = "3"
      elb_interval = "30"
 
+    ```
+
+11. Gold AMI  
+    main.tf
+
+    ```
+     resource "random_id" "golden_ami" {
+       byte_length = 8
+     }
     ```
