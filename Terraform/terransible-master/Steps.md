@@ -625,7 +625,7 @@
      resource "random_id" "golden_ami" {
        byte_length = 8
      }
-     
+
      resource "aws_ami_from_instance" "wp_golden"{
        name               = "wp_ami-${random_id.golden_ami.b64}"
        source_instance_id = aws_instance.wp_dev.id
@@ -641,8 +641,10 @@
        }
      }
     ```
+
 12. ASG and Launch configuration  
     main.tf
+
     ```
     #----- Launch configuration -----
     resource "aws_launch_configuration" "wp_lc" {
@@ -680,8 +682,10 @@
         create_before_destroy = true
       }
     }
-    ```  
+    ```
+
     variable.tf
+
     ```
     #ASG
     variable "lc_instance_type" {}
@@ -691,7 +695,9 @@
     variable "asg_hct" {}
     variable "asg_cap" {}
     ```
+
     terraform.tfvar
+
     ```
     #ASG
     lc_instance_type = "t2.micro"
@@ -700,4 +706,5 @@
     asg_grace        = "300"
     asg_hct          = "EC2"
     asg_cap          = "2"
+    ags
     ```
