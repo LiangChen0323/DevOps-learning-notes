@@ -707,3 +707,69 @@
     asg_hct          = "EC2"
     asg_cap          = "2"
     ```
+
+13. Route53  
+     main.tf
+
+    ```
+    #Primary zone
+    resource "aws_route53_zone" "primary" {
+      name              = "${var.domain_name}.net"
+      delegation_set_id = var.delegation_set
+    }
+
+    #WWW
+    resource "aws_route53_record" "www" {
+      zone_id = aws_route53_zone.primary.zone_id
+      name    = "www.${var.domain_name}.net"
+      type    = "A"
+
+      alias {
+        name                   = aws_elb.wp_elb.dns_name
+        zone_id                = aws_elb.wp_elb.zone_id
+        evaluate_target_health = false
+      }
+    }
+
+    #Dev
+    resource "aws_route53_record" "dev" {
+      zone_id = aws_route53_zone.primary.zone_id
+      name    = "dev.${var.domain_name}.net"
+      type    = "A"
+      ttl     = "300"
+      records = [aws_instance.wp_dev.public_ip]
+    }
+
+    #Private zone
+    resource "aws_route53_zone" "secondary" {
+      name   = "${var.domain_name}.net"
+      vpc_id = aws_vpc.wp_vpc.id
+    }
+
+    #DB
+    resource "aws_route53_record" "db" {
+      zone_id = aws_route53_zone.secondary.zone_id
+      name    = "db.${var.domain_name}.net"
+      type    = "CNAME"
+      ttl     = "300"
+      records = [aws_db_instance.wp_db.address]
+    }
+    ```
+
+    variable.tf
+
+    ```
+    #Route53
+    variable "delegation_set" {}
+    ```
+
+    terraform.tfvar
+
+    ```
+    aws route53 list-reusable-delegation-sets
+    ```
+
+    ```
+    #Route53
+    delegation_set = "N03349961UO36Z7VAK9KE"
+    ```
