@@ -773,3 +773,52 @@
     #Route53
     delegation_set = "N03349961UO36Z7VAK9KE"
     ```
+
+14. Ansible: s3update.yml and wordpress.yml  
+    s3update.yml
+
+    ```
+    ---
+    - host: dev
+      become: yes
+      remote_user: ec2-user
+      tasks:
+      - name: Update S3 code bucket
+        command: aws s3 sync /var/www/html s3://{{s3code}} --delete
+      - shell: echo "define('WP_SITEURL','http://dev."{{ domain }}".net');"  >> wp-config.php
+        args:
+          chdir: /var/www/html
+      - shell: echo "define('WP_HOME','http://dev."{{ domain }}".net');"  >> wp-config.php
+        args:
+          chdir: /var/www/html/
+    ```
+
+    wordpress.yml
+
+    ```
+    ---
+    - hosts: dev
+      become: yes
+      remote_user: ec2-user
+      tasks:
+        - name: Install Apache.
+          yum: name={{ item }} state=present
+          with_items:
+          - httpd
+          - php
+          - php-mysql
+        - name: Download WordPress
+          get_url: url=http://wordpress.org/wordpress-latest.tar.gz dest=/var/www/html/wordpress.tar.gz force=yes
+        - name: Extract WordPress
+          command: "tar xzf /var/www/html/wordpress.tar.gz -C /var/www/html --strip-components 1"
+        - name: Make my directory tree readable
+          file:
+            path: /var/www/html/
+            mode: u=rwX,g=rX,o=rX
+            recurse: yes
+            owner: apache
+            group: apache
+        - name: Make sure Apache is started now and at boot.
+          service: name=httpd state=started enabled=yes
+
+    ```
