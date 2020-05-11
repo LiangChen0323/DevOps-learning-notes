@@ -5,7 +5,7 @@ Ansible/366_ansible-and-amazon-web-services-cheatsheet_1563634166.pdf
 SQL/
 Terraform/content-terraform/*
 Terraform/terransible-master/*
-!Terraform/terransible-master/terransible/*                      
+!Terraform/terransible-master/terransible                      
 !Terraform/terransible-master/Steps.md
 .DS_Store
 .gitignore
