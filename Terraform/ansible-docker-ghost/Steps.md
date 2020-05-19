@@ -30,3 +30,38 @@
    `ansible all -m ping` to check if target hosts can be reached
 
    for newly created Ansible host, need to create a new ssh key and pass it to target hosts
+
+5. apt/yum modules  
+   `ansible remote -b -m apt -a "name=elinks state=present"` install elinks  
+   use -b to become default sudo user on remote host  
+   -m module  
+   -a arguments
+
+6. modules
+   `acl` – Set and retrieve file ACL information  
+   `archive` – Creates a compressed archive of one or more files or trees  
+   `assemble` – Assemble configuration files from fragments  
+   `blockinfile` – Insert/update/remove a text block surrounded by marker lines  
+   `copy` – Copy files to remote locations  
+   `fetch` – Fetch files from remote nodes  
+   `file` – Manage files and file properties  
+   `find` – Return a list of files based on specific criteria  
+   `ini_file` – Tweak settings in INI files  
+   `iso_extract` – Extract files from an ISO image  
+   `lineinfile` – Manage lines in text files  
+   `patch` – Apply patch files using the GNU patch tool  
+   `read_csv` – Read a CSV file  
+   `replace` – Replace all instances of a particular string in a file using a back-referenced regular expression  
+   `stat` – Retrieve file or file system status  
+   `synchronize` – A wrapper around rsync to make common tasks in your playbooks quick and easy  
+   `tempfile` – Creates temporary files and directories  
+   `template` – Template a file out to a remote server  
+   `unarchive` – Unpacks an archive after (optionally) copying it from the local machine  
+   `xattr` – Manage user defined extended attributes  
+   `xml` – Manage bits and pieces of XML files or strings
+   `get_url` – Downloads files from HTTP, HTTPS, or FTP to node
+   `user` – Manage user accounts  
+   `group` – Add or remove groups  
+   `package` – Generic OS package manager  
+   `service` – Manage services (Controls services on remote hosts. Supported init systems include BSD init, OpenRC, SysV, Solaris SMF, systemd, upstart.)  
+   `git` – Manage git checkouts of repositories to deploy files or software.
