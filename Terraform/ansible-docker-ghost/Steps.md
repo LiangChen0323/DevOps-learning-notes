@@ -28,3 +28,5 @@
    `sudo vim /etc/ssh/sshd_config` change `PasswordAuthentication no` to `PasswordAuthentication no` then `service sshd restart` on Ansible host and target hosts  
     `ssh-copy-id -i id_rsa.pub ansible@xxxx` copy ssh key to target hosts
    `ansible all -m ping` to check if target hosts can be reached
+
+   for newly created Ansible host, need to create a new ssh key and pass it to target hosts
