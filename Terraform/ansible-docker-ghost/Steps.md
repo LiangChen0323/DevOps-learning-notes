@@ -65,3 +65,12 @@
    `package` – Generic OS package manager  
    `service` – Manage services (Controls services on remote hosts. Supported init systems include BSD init, OpenRC, SysV, Solaris SMF, systemd, upstart.)  
    `git` – Manage git checkouts of repositories to deploy files or software.
+
+   `user`: remove user and its related files(home directory)
+
+   ```
+   ansible remote -b -m user -a "name=xxx state=absent remove=yes"
+   ```
+
+   -B: timeout
+   -P: set interval to check the command
