@@ -74,3 +74,5 @@
 
    -B: timeout
    -P: set interval to check the command
+
+7. Ansible Playbook
