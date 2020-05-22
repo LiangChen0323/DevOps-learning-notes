@@ -76,3 +76,12 @@
    -P: set interval to check the command
 
 7. Ansible Playbook
+   ```
+   ansible-playbook -i inv playbook.yml
+   ```
+   -C check mode, dry run
+
+   variable file
+   ```
+   ansible-playbook xxx.yml -e @vars.yml
+   ```
